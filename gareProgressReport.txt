@@ -1,0 +1,20 @@
+CREATE OR REPLACE FUNCTION gareProgressYear (yrs IN VARCHAR2)
+	RETURN VARCHAR2
+IS
+	status VARCHAR2(20);
+	
+BEGIN
+
+	IF yrs = 1 THEN
+		status := '1st Year';
+	ELSIF yrs = 2 THEN 
+		status := '2nd Years';
+	ELSIF YRS = 3 THEN
+		status := '3rd Years';
+	ELSE
+		status := '';
+	END IF;
+
+	RETURN status;
+	
+END;
